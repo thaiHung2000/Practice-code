@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main()
+{
+    char userName[1000];
+    for(int i = 0; i < 1000; i++ )
+    {
+        scanf("%c", &userName[i]);
+        if(userName[i] == '\n')
+        {
+            userName[i] = NULL;
+            break;
+        }
+    }
+    int count = 0;
+    
+    for(int i = 'a'; i <= 'z' ; i ++)
+    {
+        for(int j = 0 ; j < strlen(userName); j ++)
+        {
+            if(userName[j] == i)
+            {
+                count++;
+                break;
+            }
+        }
+    }
+    if( count % 2 )
+    {
+        printf("IGNORE HIM!\n");
+    }
+    else
+    {
+        printf("CHAT WITH HER!\n");
+    }
+ 
+ 
+}
