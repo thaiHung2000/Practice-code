@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main()
+{
+	int M, N;
+	scanf("%d", &M);
+	scanf("%d", &N);
+	int total = M * N ;
+	printf("%d", total / 2);
+ 
+}
