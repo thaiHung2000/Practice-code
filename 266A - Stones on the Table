@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int numOfStones;
+    int count = 0;
+    scanf("%d", &numOfStones);
+    scanf("\n");
+    char stones[100];
+    for(int i = 0 ; i < numOfStones; i ++)
+    {
+        scanf("%c", &stones[i]);
+    }
+    for(int i = 0 ; i < numOfStones; i ++ )
+    {
+        if(stones[i] == stones[i+1])
+        {
+            count++;
+        }
+    }
+    printf("%d", count);
+}
