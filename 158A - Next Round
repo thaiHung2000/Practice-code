@@ -1,0 +1,21 @@
+#include <stdio.h> 
+int main()
+{
+    int numOfPar, finisher;
+    scanf("%d%d", &numOfPar, &finisher);
+    int mang[numOfPar];
+    for(int i = 0; i < numOfPar; i ++)
+    {
+        scanf("%d", &mang[i]);
+    }
+    int count = 0;
+    for(int i = 0 ; i < numOfPar; i ++ )
+    {
+        if( mang[i] >= mang[finisher - 1] && mang[i] != 0)
+        {
+            count++;
+        }
+        
+    }
+    printf("%d", count);
+}
