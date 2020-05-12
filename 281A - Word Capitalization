@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    char word[100000];
+    for(int i = 0 ; i < 100000 ; i ++)
+    {
+        scanf("%c", &word[i]);
+        if(word[i] == '\n')
+        {
+            break;
+        }
+    }
+    if( word[0] >= 'a' && word[0] <= 'z')
+    {
+        word[0] -= 32;
+    }
+    for(int i = 0 ; i < strlen(word) ; i ++)
+    {
+        printf("%c", word[i]);
+    }
+    
+ 
+}
