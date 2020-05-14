@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    char strings[100];
+    for(int i = 0 ; i< 100 ; i++)
+    {
+        scanf("%c", &strings[i]);
+        if(strings[i] == '\n')
+        {
+            strings[i] = NULL;
+            break;
+        }
+    }
+    for(int i = 0; i < strlen(strings)/2 ;i ++)
+    {
+        
+        for(int j = 0 ; j < strlen(strings) -2-i ; j = j +2 )
+        {
+            if(strings[j] > strings[j + 2])
+            {
+                char temp = strings[j];
+                strings[j] = strings[j+2];
+                strings[j+2] = temp;
+            }
+        }
+    
+    }
+    for(int i = 0; i < strlen(strings); i ++)
+    {
+        printf("%c", strings[i]);
+    }
+}
