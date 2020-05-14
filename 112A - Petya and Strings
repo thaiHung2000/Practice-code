@@ -1,0 +1,69 @@
+#include <stdio.h>
+void changeToLower (int len,  char strings[len]);
+ 
+int main()
+{
+    char strings1[101];
+    char strings2[101];
+    for( int i = 0 ; i < 101 ; i++ )
+    {
+        scanf("%c", &strings1[i]);
+        if( strings1[i] == '\n')
+        {
+            strings1[i] = NULL ;
+            break;
+ 
+        }
+ 
+    }
+ 
+    for( int i = 0 ; i < 101 ; i++ )
+    {
+        scanf("%c", &strings2[i]);
+        if( strings2[i] == '\n')
+        {
+            strings2[i] = NULL ;
+            break;
+            
+        }
+ 
+    }
+ 
+    changeToLower(strlen(strings1),strings1);
+    changeToLower(strlen(strings2),strings2);
+    int count = 0;
+    for(int i = 0 ; i < strlen(strings1); i++)
+    {
+        if( strings1[i] < strings2[i] )
+            {
+                printf("-1");
+                count = 1;
+                break;
+            }
+        if( strings1[i] > strings2[i] )
+            {
+                printf("1");
+                count = 1;
+                break;
+            }
+ 
+ 
+    }
+    if( count == 0 )
+    {
+        printf("0");
+    }
+ 
+ 
+}
+ 
+void changeToLower (int len,  char strings[len])
+{
+    for(int i = 0 ; i < len ; i ++)
+    {
+        if(strings[i] >= 'A' && strings[i] <= 'Z')
+        {
+            strings[i] += 32;
+        }
+    }
+}
