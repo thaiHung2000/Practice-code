@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    int k,n,w;
+    scanf("%d", &k);
+    scanf("%d", &n);
+    scanf("%d", &w);
+    int totalCost = 0;
+    for(int i = 1; i <= w ; i++ )
+    {
+        totalCost += (i*k);
+    }
+    if( n < totalCost )
+    {
+        printf("%d", totalCost - n );
+    }
+    else
+    {
+        printf("0");
+    }
+}
