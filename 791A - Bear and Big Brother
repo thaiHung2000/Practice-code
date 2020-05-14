@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+    int limakW, bobW;
+    scanf("%d", &limakW);
+    scanf("%d", &bobW);
+    int numOfY;
+    for( int i = 1 ; i < 100 ; i++ )
+    {
+        limakW *= 3;
+        bobW *= 2;
+        if( limakW > bobW )
+        {
+            numOfY = i;
+            break;
+        }
+    }
+    printf("%d", numOfY) ;
+}
